@@ -25,7 +25,7 @@ SECRET_KEY = '=cw-pimoy*8s=i#^7$)@+3&u@a1sej06lv(f^m%$x%j8gs($cz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '<Aika>.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'aika.pythonanywhere.com']
 
 # Application definition
 
