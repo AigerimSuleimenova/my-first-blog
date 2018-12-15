@@ -7,7 +7,11 @@
                 {{ post.published_date }}
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-             <img src="{{ post.image.url }}" class="img-responsive" />
+            {% if post.image %}
+    <p><img src="{{post.image.url}}"></p>
+{% else %}
+   <p></p>
+{% endif %}
              <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}" >Delete post</a>
             <p>{{ post.text|linebreaksbr }}</p>
         </div>

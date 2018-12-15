@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 from . import views
 
 urlpatterns = [
@@ -8,5 +8,6 @@ urlpatterns = [
     url(r'^post/(?P<pk>\d+)/edit/$', views.post_edit, name='post_edit'),
     # url(r'^post/(?P<pk>\d+)/remove/$', views.post_remove, name='post_remove'),
     url(r'^post/(?P<pk>\d+)/delete/$', views.post_remove, name='post_remove'),
+    url(r'api', include('blog.blog_api.urls')),
 
 ]

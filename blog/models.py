@@ -6,15 +6,14 @@ class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
-    image=models.ImageField(null=True, blank=True, height_field="height_field", width_field="width_field")
-    height_field=models.IntegerField(default=0)
-    width_field=models.IntegerField(default=0)
+    image = models.ImageField(null=True, blank=True, height_field="height_field", width_field="width_field")
+    height_field = models.IntegerField(default=0)
+    width_field = models.IntegerField(default=0)
 
     created_date = models.DateTimeField(
-            default=timezone.now)
+        default=timezone.now)
     published_date = models.DateTimeField(
-            blank=True, null=True)
-
+        blank=True, null=True)
 
     def publish(self):
         self.published_date = timezone.now()
